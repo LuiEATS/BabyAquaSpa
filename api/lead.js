@@ -8,7 +8,7 @@
 // README.md ("Connecting real lead capture") to switch to a verified domain.
 
 const FROM_EMAIL = 'BabyAquaSpa Leads <onboarding@resend.dev>';
-const TO_EMAIL = 'hello@babyaquaspa.com'; // placeholder — update to the real inbox that should receive leads
+const TO_EMAIL = 'luicaleon@gmail.com';
 
 module.exports = async (req, res) => {
   if (req.method !== 'POST') {
