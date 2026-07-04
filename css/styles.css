@@ -226,6 +226,7 @@ p{margin:0 0 1em;color:var(--ink-soft);}
   gap:56px;align-items:center;
   max-width:var(--max);margin:0 auto;padding:0 28px 64px;
 }
+.hero .eyebrow{color:#fff;}
 .hero-trust{
   display:flex;gap:22px;flex-wrap:wrap;
   margin-top:28px;
