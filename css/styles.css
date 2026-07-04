@@ -247,7 +247,6 @@ p{margin:0 0 1em;color:var(--ink-soft);}
 .hero-media-frame{
   position:relative;
   width:100%;
-  max-width:340px;
 }
 .hero-media-frame::before{
   content:"";
