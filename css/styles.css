@@ -135,11 +135,8 @@ p{margin:0 0 1em;color:var(--ink-soft);}
 }
 .logo-mark{
   width:36px;height:36px;
-  border-radius:50%;
-  background:var(--sage-light);
   display:flex;align-items:center;justify-content:center;
   flex-shrink:0;
-  /* LOGO PLACEHOLDER: replace this div's contents with <img src="/assets/logo.svg" alt="BabyAquaSpa logo"> */
 }
 .logo-mark svg{width:20px;height:20px;}
 .nav-links{
