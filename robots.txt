@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://baby-aqua-spa-com.vercel.app/sitemap.xml
+Sitemap: https://babyaquaspa.com/sitemap.xml

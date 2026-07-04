@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://baby-aqua-spa-com.vercel.app/</loc>
+    <loc>https://babyaquaspa.com/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://baby-aqua-spa-com.vercel.app/services.html</loc>
+    <loc>https://babyaquaspa.com/services.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baby-aqua-spa-com.vercel.app/insurance.html</loc>
+    <loc>https://babyaquaspa.com/insurance.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://baby-aqua-spa-com.vercel.app/book.html</loc>
+    <loc>https://babyaquaspa.com/book.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://baby-aqua-spa-com.vercel.app/contact.html</loc>
+    <loc>https://babyaquaspa.com/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
