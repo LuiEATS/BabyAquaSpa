@@ -1,0 +1,9 @@
+{
+  "name": "babyaquaspa-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BabyAquaSpa marketing site with AI chatbot lead capture",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.0"
+  }
+}

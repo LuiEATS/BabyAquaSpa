@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Book a Session — BabyAquaSpa</title>
+<meta name="description" content="Book a BabyAquaSpa session or request a free insurance benefits check." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="color:#234139;width:20px;height:20px;"><path d="M12 3s6 6.5 6 10.5A6 6 0 0 1 6 13.5C6 9.5 12 3 12 3Z"/></svg>
+      </span>
+      BabyAquaSpa
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services &amp; Pricing</a></li>
+      <li><a href="insurance.html">Insurance &amp; Medical</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="book.html" class="nav-cta active">Book Now</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">HOME / BOOK NOW</div>
+    <h1>Tell us about your baby, and we'll take it from there.</h1>
+    <p class="max-w-copy" style="margin-top:14px;">Fill this out and our team will call or email within one business day to confirm a time — and, if you'd like, start a free insurance benefits check.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="max-width:760px;">
+    <div class="card reveal">
+      <form data-lead-form>
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="name">Parent/Guardian Name *</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-field">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="form-field">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-field">
+            <label for="baby_age">Baby's Age</label>
+            <input type="text" id="baby_age" name="baby_age" placeholder="e.g. 5 months" />
+          </div>
+          <div class="form-field full">
+            <label for="package">Preferred Package</label>
+            <select id="package" name="package">
+              <option value="">Not sure yet — help me choose</option>
+              <option value="relax">Relax (45 min) — $85</option>
+              <option value="premium">Premium (60 min) — $110</option>
+              <option value="deluxe">Deluxe (75 min) — $130</option>
+              <option value="vip">VIP Private Room — $130</option>
+              <option value="vip_deluxe">VIP Deluxe — $145</option>
+              <option value="insurance">Insurance-billed clinical visit</option>
+            </select>
+          </div>
+          <div class="form-field full">
+            <label>Would you like us to check insurance coverage first?</label>
+            <div class="radio-row">
+              <label class="radio-option"><input type="radio" name="insurance_check" value="yes" checked /> Yes, check my benefits</label>
+              <label class="radio-option"><input type="radio" name="insurance_check" value="no" /> No, private-pay is fine</label>
+              <label class="radio-option"><input type="radio" name="insurance_check" value="unsure" /> Not sure</label>
+            </div>
+          </div>
+          <div class="form-field full">
+            <label for="preferred_time">Preferred Date/Time</label>
+            <input type="text" id="preferred_time" name="preferred_time" placeholder="e.g. Weekday mornings" />
+          </div>
+          <div class="form-field full">
+            <label for="notes">Anything else we should know?</label>
+            <textarea id="notes" name="notes" placeholder="Medical concerns, referrals, questions…"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Request Booking</button>
+        <p class="form-note center" style="margin-top:10px;">This confirms a request, not a booked slot — we'll follow up to finalize your time.</p>
+      </form>
+      <div class="form-success">
+        <strong>Thank you!</strong> We've received your request and will reach out within one business day to confirm your session.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-sage section-tight">
+  <div class="container center">
+    <p style="font-family:var(--font-mono);font-size:0.82rem;color:var(--ink-soft);">Prefer to talk it through first? Use the chat bubble in the corner, or call (504) 555-0182.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <span class="logo-mark" style="background:rgba(255,255,255,0.1);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" style="width:20px;height:20px;"><path d="M12 3s6 6.5 6 10.5A6 6 0 0 1 6 13.5C6 9.5 12 3 12 3Z"/></svg>
+          </span>
+          BabyAquaSpa
+        </div>
+        <p style="color:#8FA79C;font-size:0.9rem;max-width:280px;">New Orleans' luxury infant hydrotherapy clinic — private-pay spa care and insurance-billed clinical therapy, under one roof.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="services.html">Services &amp; Pricing</a></li>
+          <li><a href="insurance.html">Insurance &amp; Medical</a></li>
+          <li><a href="book.html">Book Now</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>(504) 555-0182</li>
+          <li>hello@babyaquaspa.com</li>
+          <li>New Orleans, LA</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <ul>
+          <li>Tue – Sat: 9am – 6pm</li>
+          <li>Sun – Mon: Closed</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 BabyAquaSpa. All rights reserved.</span>
+      <span>Placeholder site — replace all bracketed content before launch.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>
