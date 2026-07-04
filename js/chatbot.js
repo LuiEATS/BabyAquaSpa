@@ -9,6 +9,9 @@
 
 (function () {
   const STORAGE_KEY = 'basp_chat_history';
+  const TEASER_DISMISSED_KEY = 'basp_teaser_dismissed';
+  const TEASER_DELAY_MS = 3500;
+  const TEASER_TEXT = "👋 Have a question about sessions, pricing, or insurance? Ask us anything!";
 
   const state = {
     history: [], // { role: 'user'|'assistant', content: string }
@@ -52,8 +55,13 @@
     document.body.appendChild(launcher);
     document.body.appendChild(panel);
 
-    launcher.addEventListener('click', () => togglePanel(panel, true));
+    launcher.addEventListener('click', () => {
+      dismissTeaser(launcher);
+      togglePanel(panel, true);
+    });
     panel.querySelector('.chat-close').addEventListener('click', () => togglePanel(panel, false));
+
+    maybeShowTeaser(launcher, panel);
 
     const input = panel.querySelector('#basp-chat-input');
     const sendBtn = panel.querySelector('#basp-chat-send');
@@ -70,6 +78,45 @@
       "What ages do you treat?",
       "I'd like a call back",
     ]);
+  }
+
+  function maybeShowTeaser(launcher, panel) {
+    if (sessionStorage.getItem(TEASER_DISMISSED_KEY)) return;
+
+    setTimeout(() => {
+      if (panel.classList.contains('open')) return;
+
+      const teaser = el('div', { class: 'chat-teaser' });
+      teaser.innerHTML = `
+        <button class="chat-teaser-close" aria-label="Dismiss">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+        <span>${TEASER_TEXT}</span>
+      `;
+      document.body.appendChild(teaser);
+      launcher.classList.add('has-teaser');
+      requestAnimationFrame(() => teaser.classList.add('show'));
+
+      teaser.addEventListener('click', () => {
+        dismissTeaser(launcher, teaser);
+        togglePanel(panel, true);
+      });
+      teaser.querySelector('.chat-teaser-close').addEventListener('click', (e) => {
+        e.stopPropagation();
+        dismissTeaser(launcher, teaser);
+      });
+
+      sessionStorage.setItem(TEASER_DISMISSED_KEY, '1');
+    }, TEASER_DELAY_MS);
+  }
+
+  function dismissTeaser(launcher, teaser) {
+    launcher.classList.remove('has-teaser');
+    const node = teaser || document.querySelector('.chat-teaser');
+    if (node) {
+      node.classList.remove('show');
+      setTimeout(() => node.remove(), 300);
+    }
   }
 
   function togglePanel(panel, open) {

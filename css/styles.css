@@ -533,19 +533,46 @@ section{padding:76px 0;}
    ========================================================================== */
 .chat-launcher{
   position:fixed;bottom:24px;right:24px;z-index:200;
-  width:60px;height:60px;border-radius:50%;
+  width:68px;height:68px;border-radius:50%;
   background:var(--teal-deep);color:#fff;
   display:flex;align-items:center;justify-content:center;
   cursor:pointer;box-shadow:var(--shadow-lift);
   border:none;transition:transform 0.2s;
+  animation:launcherPulse 2.6s ease-out infinite;
 }
 .chat-launcher:hover{transform:scale(1.06);}
-.chat-launcher svg{width:26px;height:26px;}
+.chat-launcher svg{width:28px;height:28px;}
 .chat-launcher .pulse-dot{
   position:absolute;top:-3px;right:-3px;
   width:14px;height:14px;border-radius:50%;
   background:var(--gold);border:2px solid var(--bg);
 }
+@keyframes launcherPulse{
+  0%{box-shadow:var(--shadow-lift),0 0 0 0 rgba(30,58,95,0.45);}
+  70%{box-shadow:var(--shadow-lift),0 0 0 16px rgba(30,58,95,0);}
+  100%{box-shadow:var(--shadow-lift),0 0 0 0 rgba(30,58,95,0);}
+}
+.chat-launcher.has-teaser{animation:none;}
+.chat-teaser{
+  position:fixed;bottom:100px;right:24px;z-index:200;
+  max-width:240px;
+  background:var(--surface);color:var(--ink,#1c1c1c);
+  border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow-lift);
+  padding:14px 34px 14px 16px;
+  font-size:0.86rem;line-height:1.4;
+  transform:translateY(10px) scale(0.97);
+  opacity:0;pointer-events:none;
+  transition:transform 0.3s ease, opacity 0.3s ease;
+}
+.chat-teaser.show{transform:translateY(0) scale(1);opacity:1;pointer-events:auto;cursor:pointer;}
+.chat-teaser-close{
+  position:absolute;top:8px;right:8px;
+  width:20px;height:20px;border:none;background:none;
+  color:var(--sage);cursor:pointer;opacity:0.7;
+  display:flex;align-items:center;justify-content:center;
+}
+.chat-teaser-close:hover{opacity:1;}
 .chat-panel{
   position:fixed;bottom:96px;right:24px;z-index:200;
   width:360px;max-height:70vh;
@@ -630,4 +657,5 @@ section{padding:76px 0;}
 @media (max-width:480px){
   .chat-panel{width:calc(100vw - 32px);right:16px;bottom:90px;}
   .chat-launcher{right:16px;bottom:16px;}
+  .chat-teaser{right:16px;max-width:calc(100vw - 90px);}
 }
