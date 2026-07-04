@@ -275,6 +275,7 @@ section{padding:76px 0;}
 .section-dark .eyebrow{color:var(--gold);}
 .section-dark .eyebrow::before{background:#fff;}
 .section-sage{background:var(--sage-light);}
+.section-white{background:var(--surface);}
 .center{text-align:center;}
 .max-w-copy{max-width:640px;}
 .mx-auto{margin-left:auto;margin-right:auto;}
