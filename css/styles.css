@@ -175,14 +175,14 @@ p{margin:0 0 1em;color:var(--ink-soft);}
 
 @media (max-width:900px){
   .nav-links{
-    position:fixed;top:73px;left:0;right:0;
+    position:fixed;top:calc(73px + env(safe-area-inset-top));left:0;right:0;
     background:var(--teal-deep);
     flex-direction:column;
     align-items:flex-start;
     gap:0;
     padding:8px 28px 20px;
     border-bottom:1px solid rgba(255,255,255,0.12);
-    transform:translateY(-110%);
+    transform:translateY(calc(-100% - 100px));
     transition:transform 0.25s ease;
   }
   .nav-links.open{transform:translateY(0);}
